@@ -1,28 +1,64 @@
+# Proyecto Angular 17
+====
 
-Aplicación realizada con Angular 17 
-=======
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8.
+Este proyecto está construido con [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8. Utiliza Node.js 20.14.0, junto con npm 10.7.0. y Tailwind CSS 3.4.4 para el diseño de la interfaz. Se han añadido funcionalidades de seguridad, como guards, para la protección de rutas al momento de autenticarse.
 
-## Development server
+## Requisitos
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- **Node.js**: Versión 20.14.0
+- **npm**: Versión 10.7.0
 
-## Code scaffolding
+## Instalación
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+### Clonar el Repositorio
 
-## Build
+```bash
+git clone https://github.com/tu-usuario/tu-repositorio.git
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+O Descargar el ZIP
+Puedes descargar el proyecto como un archivo ZIP desde este enlace.
 
-## Running unit tests
+## Instalar Dependencias
+Navega al directorio del proyecto e instala las dependencias necesarias:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+cd tu-repositorio
+npm install
+```
 
-## Running end-to-end tests
+## Ejecución del Proyecto
+Para ejecutar el proyecto en un entorno de desarrollo, utiliza el siguiente comando:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```bash
+ng serve
+```
 
-## Further help
+Esto abrirá una nueva pestaña en tu navegador en http://localhost:4200.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## Credenciales de Acceso
+Para iniciar sesión, usa las siguientes credenciales estáticas:
+Usuario: admin
+Contraseña: admin2024
+
+Puedes copiar los datos haciendo clic en los campos siguientes:
+
+Usuario: <span style="cursor: pointer; color: blue;" onclick="navigator.clipboard.writeText('admin');">admin</span>
+Contraseña: <span style="cursor: pointer; color: blue;" onclick="navigator.clipboard.writeText('admin2024');">admin2024</span>
+
+> Nota: La funcionalidad de copiado es soportada por navegadores modernos. Si no funciona, por favor copia manualmente las credenciales.
+
+## Implementación de Tailwind CSS
+Este proyecto utiliza Tailwind CSS para la estilización. Puedes personalizar los estilos en el archivo tailwind.config.js y en las hojas de estilo de tu aplicación.
+
+## Seguridad
+Para proteger las rutas, se han implementado guards que verifican la autenticación del usuario. Esto asegura que solo los usuarios autenticados puedan acceder a determinadas rutas dentro de la aplicación.
+
+## Contribuciones
+Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+
+Haz un fork del repositorio.
+1. Crea una nueva rama con tus cambios: **git checkout -b develop**
+2. Realiza un commit de tus cambios: **git commit -m 'Descripción de cambios'**
+3. Sube tus cambios al repositorio: **git push origin develop**
+4. Envía un pull request.
