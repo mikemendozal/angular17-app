@@ -38,12 +38,12 @@ Esto abrirá una nueva pestaña en tu navegador en http://localhost:4200.
 ## Credenciales de Acceso
 Para iniciar sesión, usa las siguientes credenciales estáticas:
 
-Usuario:
+**Usuario**
 ```bash
 admin
 ```
 
-Contraseña: 
+**Contraseña**
 ```bash  
 admin2024
 ```
@@ -56,9 +56,69 @@ Para proteger las rutas, se han implementado guards que verifican la autenticaci
 
 ## Contribuciones
 Si deseas contribuir a este proyecto, por favor sigue estos pasos:
+* Fork del repositorio
+* Clonar el repositorio
+* Actualizar la rama master
+* Crear una rama
+* Hacer los cambios
+* Hacer un Pull Request
 
-Haz un fork del repositorio.
-1. Crea una nueva rama con tus cambios: **git checkout -b develop**
-2. Realiza un commit de tus cambios: **git commit -m 'Descripción de cambios'**
-3. Sube tus cambios al repositorio: **git push origin develop**
-4. Envía un pull request.
+### Fork del repositorio
+El primer paso es hacer "Fork" del repositorio.
+
+### Clonar el repositorio
+Después de tener el repositorio en nuestra cuenta, seleccionar la dirección del repositorio "SSH o HTTP" y clonar:
+
+```bash
+$ git clone https://github.com/mikemendozal/angular17-app.git
+```
+
+Dentro de la carpeta que genera, comprobar la URL del repositorio:
+
+```bash
+$ git remote -v
+```
+
+Antes de realizar modificaciones agregar la URL del repositorio original del proyecto:
+
+```bash
+$ git remote add upstream https://github.com/mikemendozal/angular17-app.git(Forkeado)
+```
+
+Comprobar
+
+```bash
+$ git remote -v
+```
+
+### Actualizar la rama Master
+Antes de empezar a trabajar, obtener los últimos cambios del Repo Original:
+
+```bash
+$ git pull -r upstream master
+```
+
+### Crear una Rama
+Para crear una rama usar la opción "checkout" de git:
+
+```bash
+$ git checkout -b feature-nombre-rama
+```
+
+### Hacer cambios
+Realizar todos los cambios que se desea hacer al proyecto.
+
+Agregar los archivos y hacer un commit
+
+Después de realizar el commit hacer el push hacia nuestro repositorio indicando la rama que hemos creado.
+
+```bash
+$ git push origin feature-nombre-rama
+```
+
+### Hacer un Pull Request
+Hacer click en "Compare & Pull Request"
+
+Escribir cambios del Pull Request.
+
+Si todo está bien, enviar con el botón "Send Pull Request".
