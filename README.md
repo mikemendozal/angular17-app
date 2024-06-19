@@ -1,5 +1,4 @@
 # Proyecto Angular 17
-====
 
 Este proyecto está construido con [Angular CLI](https://github.com/angular/angular-cli) version 17.3.8. Utiliza Node.js 20.14.0, junto con npm 10.7.0. y Tailwind CSS 3.4.4 para el diseño de la interfaz. Se han añadido funcionalidades de seguridad, como guards, para la protección de rutas al momento de autenticarse.
 
@@ -38,15 +37,11 @@ Esto abrirá una nueva pestaña en tu navegador en http://localhost:4200.
 
 ## Credenciales de Acceso
 Para iniciar sesión, usa las siguientes credenciales estáticas:
+
+```bash
 Usuario: admin
 Contraseña: admin2024
-
-Puedes copiar los datos haciendo clic en los campos siguientes:
-
-Usuario: <span style="cursor: pointer; color: blue;" onclick="navigator.clipboard.writeText('admin');">admin</span>
-Contraseña: <span style="cursor: pointer; color: blue;" onclick="navigator.clipboard.writeText('admin2024');">admin2024</span>
-
-> Nota: La funcionalidad de copiado es soportada por navegadores modernos. Si no funciona, por favor copia manualmente las credenciales.
+```
 
 ## Implementación de Tailwind CSS
 Este proyecto utiliza Tailwind CSS para la estilización. Puedes personalizar los estilos en el archivo tailwind.config.js y en las hojas de estilo de tu aplicación.
