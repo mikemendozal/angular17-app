@@ -16,7 +16,7 @@ git clone https://github.com/tu-usuario/tu-repositorio.git
 ```
 
 O Descargar el ZIP
-Puedes descargar el proyecto como un archivo ZIP desde [este enlace][https://github.com/mikemendozal/angular17-app/archive/refs/heads/develop.zip]
+Puedes descargar el proyecto como un archivo ZIP desde [este enlace](https://github.com/mikemendozal/angular17-app/archive/refs/heads/develop.zip)
 
 ## Instalar Dependencias
 Navega al directorio del proyecto e instala las dependencias necesarias:
