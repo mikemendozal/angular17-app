@@ -43,7 +43,10 @@ Usuario:
 admin
 ```
 
-Contraseña: ```bash  admin2024```
+Contraseña: 
+```bash  
+admin2024
+```
 
 ## Implementación de Tailwind CSS
 Este proyecto utiliza Tailwind CSS para la estilización. Puedes personalizar los estilos en el archivo tailwind.config.js y en las hojas de estilo de tu aplicación.
