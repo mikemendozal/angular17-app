@@ -4,7 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  token: string = '';
+  private token: string = '';
+  private REMEMBER_ME_KEY = 'remember_me';
 
   setToken(token: string){
     this.token = token;
@@ -25,4 +26,6 @@ export class AuthService {
     this.token = '';
     localStorage.removeItem('token');
   }
+
+  
 }

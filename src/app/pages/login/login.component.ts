@@ -12,13 +12,16 @@ import { Router } from '@angular/router';
 })
 export class LoginComponent {
 
+  username: string = '';
+  password: string = '';
+  rememberMe: boolean = false;
   borderColorUser: string = 'border-gray-300';
   borderFocusColorUser: string = 'focus:border-blue-500';
   borderColorPassword: string = 'border-gray-300';
   borderFocusColorPassword: string = 'focus:border-blue-500';
   displayAlert: boolean = false;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router) {}
 
   setBorderColorUser(color: string) {
     this.borderColorUser = color;
@@ -64,6 +67,8 @@ export class LoginComponent {
     this.displayAlert = false;
   }
 
+  
+
   onSubmit(loginForm: NgForm): void {
     this.getBorderColorUser();
     this.getBorderFocusColorUser();
@@ -71,7 +76,7 @@ export class LoginComponent {
     this.getBorderFocusColorPassword();
 
     if (loginForm.valid) {
-      if(loginForm.controls['usuario'].value === 'admin' && loginForm.controls['password'].value === 'admin2024' ){
+      if(this.username === 'admin' && this.password === 'admin2024' ){
         
         this.authService.setToken('mFqPSClesU92gtbgRrEUU5RjYejr9WID30EgOwkhv2vkDBJxD0gTRWgfW5GX7sfd');
         if(this.authService.isAuth()){
