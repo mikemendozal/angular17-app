@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { AuthService } from '../../services/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -14,6 +16,9 @@ export class LoginComponent {
   borderFocusColorUser: string = 'focus:border-blue-500';
   borderColorPassword: string = 'border-gray-300';
   borderFocusColorPassword: string = 'focus:border-blue-500';
+  displayAlert: boolean = false;
+
+  constructor(private authService: AuthService, private router: Router) { }
 
   setBorderColorUser(color: string) {
     this.borderColorUser = color;
@@ -47,6 +52,18 @@ export class LoginComponent {
     return this.borderFocusColorPassword;
   }
 
+  setDisplayAlert(display: boolean) {
+    this.displayAlert = display;
+  }
+
+  dismissAlert() {
+    this.displayAlert = true;
+  }
+
+  dissmissAlertClose() {
+    this.displayAlert = false;
+  }
+
   onSubmit(loginForm: NgForm): void {
     this.getBorderColorUser();
     this.getBorderFocusColorUser();
@@ -54,11 +71,17 @@ export class LoginComponent {
     this.getBorderFocusColorPassword();
 
     if (loginForm.valid) {
-      if(loginForm.value.username == 'admin' && loginForm.value.password == 'admin'){
+      if(loginForm.controls['usuario'].value === 'admin' && loginForm.controls['password'].value === 'admin2024' ){
         
+        this.authService.setToken('mFqPSClesU92gtbgRrEUU5RjYejr9WID30EgOwkhv2vkDBJxD0gTRWgfW5GX7sfd');
+        if(this.authService.isAuth()){
+          this.router.navigate(['/home']);
+        }
+      }else{
+        this.dismissAlert();
       }
-      console.log('Form Submitted', loginForm.value);
-    } else {
+    } 
+    else {
 
       if(loginForm.controls['usuario'].value === '' && loginForm.controls['password'].value === '') {
         this.setBorderColorUser('border-red-500');
@@ -67,10 +90,6 @@ export class LoginComponent {
         this.setBorderFocusColorPassword('focus:border-red-500');
       }
 
-     
-
-
-      console.error('Form Invalid');
     }
   }
   

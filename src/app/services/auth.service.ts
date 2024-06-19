@@ -4,11 +4,19 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class AuthService {
-  token = 'srge2'
+  token: string = '';
+
+  setToken(token: string){
+    this.token = token;
+  }
 
   constructor() { }
 
   isAuth(){
     return this.token.length>0;
+  }
+
+  logout(){
+    this.token = '';
   }
 }
