@@ -38,10 +38,12 @@ Esto abrirá una nueva pestaña en tu navegador en http://localhost:4200.
 ## Credenciales de Acceso
 Para iniciar sesión, usa las siguientes credenciales estáticas:
 
+Usuario:
 ```bash
-Usuario: admin
-Contraseña: admin2024
+admin
 ```
+
+Contraseña: ```bash  admin2024```
 
 ## Implementación de Tailwind CSS
 Este proyecto utiliza Tailwind CSS para la estilización. Puedes personalizar los estilos en el archivo tailwind.config.js y en las hojas de estilo de tu aplicación.
