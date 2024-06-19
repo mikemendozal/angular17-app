@@ -8,15 +8,21 @@ export class AuthService {
 
   setToken(token: string){
     this.token = token;
+    localStorage.setItem('token', token);
+  }
+
+  getToken(): string | null {
+    return localStorage.getItem('token');
   }
 
   constructor() { }
 
-  isAuth(){
-    return this.token.length>0;
+  isAuth(): boolean{
+    return this.getToken() !== null;
   }
 
-  logout(){
+  logout(): void{
     this.token = '';
+    localStorage.removeItem('token');
   }
 }
