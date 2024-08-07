@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+const defaultTheme = require('tailwindcss/defaultTheme')
 module.exports = {
   content: [
     "./src/**/*.{html,ts}",
@@ -17,6 +18,13 @@ module.exports = {
       borderWidth: {
         '1.8': '1.8px', // Agrega 1.8 píxeles como un nuevo tamaño de borde
       }
+    },
+    screens: {
+      'xs': '475px',
+      'xss': '320px',
+      'x': '390px',
+      'i': '375px',
+      ...defaultTheme.screens,
     }
   },
   plugins: [],

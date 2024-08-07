@@ -1,6 +1,6 @@
 <div class="flex w-full">
     <app-sidebar></app-sidebar>
-    <div class="flex-1 w-46 ">
+    <div [class]="!isSidebarOpen ? 'xss:pb-14 xss:ml-16 xss:size-5 xs:ml-56 sm:ml-56 md:ml-56 ':'' " class="flex-1 lg:ml-56 xl:ml-56">
         <section class="relative pt-36 ">
             <img src="https://pagedone.io/asset/uploads/1705471739.png" alt="cover-image" class="w-full absolute top-0 left-0 z-0 h-60">
             <div class="w-full max-w-7xl mx-auto px-6 md:px-8">
@@ -41,7 +41,7 @@
                 </div>
                 <h3 class="text-center font-manrope font-bold text-3xl leading-10 text-gray-900 mb-3">John Doe</h3>
                 <p class="font-normal text-base leading-7 text-gray-500 text-center mb-8">Un Especialista en Redes Sociales apasionado por conectar marcas con sus audiencias a través de estrategias digitales innovadoras. Con una sólida trayectoria en la creación de contenido atractivo y campañas efectivas.</p>
-                <div class="flex items-center justify-center gap-5">
+                <div [class]="!isSidebarOpen ? 'xss:flex-wrap xss:px-4 xs:px-0' : 'xss:flex-wrap xss:px-4 xs:px-0'" class="flex items-center justify-center gap-5">
                     <a href="javascript:;"
                         class="p-3 rounded-full border border-solid border-gray-300 group bg-gray-50 transition-all duration-500 hover:bg-indigo-700 hover:border-indigo-700">
                         <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">

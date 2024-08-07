@@ -12,6 +12,7 @@ export const routes: Routes = [
     {path: 'home', component: DashboardComponent, canActivate: [authGuard]},
     {path: 'profile', component: ProfileComponent, canActivate: [authGuard]},
     {path: 'maintenance', component: MaintenanceComponent, canActivate: [authGuard]},
+    {path: 'settings', component: MaintenanceComponent, canActivate: [authGuard]},
     {path: '**', component: NotFoundComponent}
 
 ];

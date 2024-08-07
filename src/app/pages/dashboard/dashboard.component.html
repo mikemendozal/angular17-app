@@ -1,8 +1,8 @@
 <div class="flex w-full">
     <app-sidebar></app-sidebar>
-    <div class="flex-1 w-46 ">
-        <section class="flex flex-col h-screen px-12 text-gray-600 body-font">
-            <div class="container px-5 py-24 mx-auto">
+    <div [class]="!isSidebarOpen ? 'md:ml-44 sm:ml-48 xs:ml-48 xss: ml-8 xss:w-48' : ''"  class="flex-1 w-46 lg:ml-44 xl:ml-52 ">
+        <section [class]="!isSidebarOpen ? 'xss:px-6 xs:pl-10 xs:pr-2 md:pl-14 md:pr-4':'xss:px-6 md:px-0' " class="flex flex-col h-screen lg:px-12  text-gray-600 body-font">
+            <div class=" xss:py-20 container pl-5 xs:pr-5 lg:pr-0 py-24 mx-auto">
               <h1 class="sm:text-3xl text-2xl font-medium title-font text-center text-gray-900 mb-20">Raw Denim Heirloom Man Braid
                 <br class="hidden sm:block">Selfies Wayfarers
               </h1>

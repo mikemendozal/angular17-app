@@ -1,3 +1,39 @@
 .active{
     background-color: rgb(243 244 246);
 }
+
+.closed {
+  transform: translateX(0);
+  display:none;
+}
+
+/* Define la posición del sidebar cuando está cerrado */
+.open {
+  transform: translateX(-100%);
+  display: flex;
+}
+
+
+/* Define la posición del sidebar cuando está abierto */
+.sidebar {
+  transform: translateX(0);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* En pantallas grandes, el sidebar siempre está abierto */
+@media (min-width: 1024px) {
+  
+
+  .sidebar {
+    transform: translateX(0);
+    display: flex;
+  }
+
+  .lg-hidden {
+    display: none;
+  }
+
+  
+}
+
+  
